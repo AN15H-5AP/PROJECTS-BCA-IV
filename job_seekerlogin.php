@@ -19,8 +19,8 @@ $error ='';
   $stmt->bind_result($password);
   if($stmt->fetch() == TRUE){
       $isPasswordCorrect = password_verify($password,$password);
-      $_SESSION['email'] = $email;
-      header("Location:indecs.php");
+      $_SESSION['Email'] = $email;
+      header("Location:jobseekerprofile.php");
   }
   else{
     $error = "user doesn't exist";
@@ -34,7 +34,7 @@ $error ='';
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./styles/job_seekerlogin.css" />
+    <link rel="stylesheet" href="./Styles/job_seekerlogin.css" />
   </head>
   <body>
     <div>

@@ -23,7 +23,7 @@
     <div class="buttons">
       <img src="./images/Account icon.svg" alt="#" class="test">
       <div class="dropdown">
-        <a href="companyprofile.php"><button>profile</button></a>
+        <a href="jobseekerprofile.php"><button>profile</button></a>
         <a href="sessiondestroy.php"><button>Log out</button></a>
       </div>
     </div>

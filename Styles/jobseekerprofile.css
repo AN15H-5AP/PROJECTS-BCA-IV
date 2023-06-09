@@ -194,3 +194,32 @@ table tr:hover {
 }
 
 
+/* css for the jobseeker resume view */
+
+
+.resume-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type="file"] {
+    margin: 20px 0;
+}
+
+#viewResume {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+}
+
+#resumeViewer {
+    margin-top: 40px;
+}
