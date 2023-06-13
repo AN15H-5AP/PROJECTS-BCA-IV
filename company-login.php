@@ -29,6 +29,27 @@ if (isset($_POST['signin'])) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/companylogin.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <?php include('company-loginnav.php') ?>
+    </div> 
+    <div class="outersection">
+    <?php if(isset($_SESSION['success'])){
+                echo $_SESSION['success']; 
+                unset($_SESSION['success']);
+              } ?>
+      <div class="formlogin">
+        <div class="login">
+>>>>>>> origin/main
 
 <head>
   <meta charset="UTF-8" />

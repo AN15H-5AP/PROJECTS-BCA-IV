@@ -14,17 +14,27 @@ if (isset($_POST['signin'])) {
   // $result = $stmt->get_result();
   $isPasswordCorrect = FALSE;
   $stmt->bind_result($password);
+<<<<<<< HEAD
   if ($stmt->fetch() == TRUE) {
     $isPasswordCorrect = password_verify($password, $password);
     $_SESSION['email'] = $email;
     header("Location:index.php");
   } else {
+=======
+  if($stmt->fetch() == TRUE){
+      $isPasswordCorrect = password_verify($password,$password);
+      $_SESSION['Email'] = $email;
+      header("Location:jobseekerprofile.php");
+  }
+  else{
+>>>>>>> origin/main
     $error = "user doesn't exist";
   }
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+<<<<<<< HEAD
 
 <head>
   <meta charset="UTF-8" />
@@ -45,6 +55,26 @@ if (isset($_POST['signin'])) {
       </div>
       <div class="login">
         <!-- <div class="headerbutton">
+=======
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Styles/job_seekerlogin.css" />
+  </head>
+  <body>
+    <div>
+      <?php include('job_seekerloginnav.php') ?>
+    </div>
+    <div class="outersection">
+      <div class="formlogin">
+        <div class="imagesection">
+          <img src="./images/illustrate.png" alt="#" />
+        </div>
+        <div class="login">
+          <!-- <div class="headerbutton">
+>>>>>>> origin/main
             <button type="submit" class="signin">Sign in</button>
             <button type="submit" class="register">Register</button>
           </div> -->

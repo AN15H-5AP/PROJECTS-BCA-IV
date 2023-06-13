@@ -6,7 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+<<<<<<< HEAD
     <link rel="stylesheet" href="./styles/company-registrationnav.css">
+=======
+    <link rel="stylesheet" href="./Styles/company-registrationnav.css">
+>>>>>>> origin/main
 </head>
 <body>
 <div class="navbar_flow">

@@ -16,7 +16,7 @@ $result = mysqli_query($conn, $sql);
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="./styles/companyproffile.css">
+  <link rel="stylesheet" href="./Styles/companyproffile.css">
   <link rel="stylesheet" href="./include/fontawesome-free-6.4.0-web/css/brands.css">
   <link rel="stylesheet" href="./include/fontawesome-free-6.4.0-web/css/fontawesome.css">
   <link rel="stylesheet" href="./include/fontawesome-free-6.4.0-web/css/solid.css">

@@ -1,0 +1,8 @@
+CREATE TABLE jobblogs (
+  blog_id INT PRIMARY KEY AUTO_INCREMENT,
+  title TEXT(500) NOT NULL,
+  posted_user VARCHAR(100),
+  description LONGTEXT NOT NULL,
+  image VARCHAR(255) NOT NULL,
+  posted_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

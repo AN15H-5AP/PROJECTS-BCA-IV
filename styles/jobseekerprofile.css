@@ -1,4 +1,5 @@
 body{
+<<<<<<< HEAD:styles/jobseekerprofile.css
     margin: 0px;
     padding: 0px;
 }
@@ -24,4 +25,229 @@ body{
 }
 .imagetop{
     margin:6px 0px 0px 70px;
+=======
+    margin: 0;
+    padding: 0;
+}
+.navbar{
+    position: sticky;
+}
+.container{
+    background-color: #dfdfdf;
+}
+.dashboard-page{
+    display: flex;
+    width: 100%;
+    height: 129vh;
+    background-color: #dfdfdf;
+}
+
+.dashboard-nav{
+  flex-basis: 15%;
+  background-color: rgb(15, 34, 34);
+  height:129vh;
+}
+.dashboard-content{
+    flex-basis: 85%;
+}
+.dashboard-vertical-nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.dashboard-nav button{
+    width: 100%;
+    border: none;
+    background: transparent;
+    outline: none;
+    padding: 18px 20px;
+    font-weight: bold;
+    color: azure;
+    cursor: pointer;
+    float: left;
+}
+.profile-details{
+    border:none; 
+    width: 80%;
+    height: 66vh;
+    display: block;
+    margin: 0;
+    background-color: rgb(237, 245, 242);
+    box-shadow:px 5px 20px rgb(119,119, 119.5) ;
+}
+.profile-sub{
+    display: flex;
+    justify-content: space-between;
+}
+.profile-sub .details{
+    margin-left: 4px;
+}
+.profile-header{
+    display: flex;
+    justify-content: space-between;
+}
+.imagesection{
+    margin-left: 23px;
+}
+.profile-header img{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #dfdfdf;
+}
+.profile-header .editoption{
+    margin-top: 14px;
+    margin-right: 14px;
+}
+.editoption a{
+    /* text-decoration: none; */
+    font-size: 20px;
+}
+.editoption a:hover{
+    color: blue;
+}
+.profile-information{
+    margin-left: 15px;
+}
+.description{
+    font-size: 19px;
+}
+.profile-information .profile-subinfo{
+    font-size: 19px;
+}
+
+
+/* ----------end of proile tab---------- */
+/* .container{
+    display: none;
+} */
+/*--------------post job------------------------------------ */
+.postjob-details{
+    border:none;
+    background-color: #dfdfdf;
+    width: 100%;
+    height: 116vh;  
+}
+.postjob-details-qualification{
+    margin-left: 10px;
+    /* margin-top: 15px; */
+}
+select{
+    padding: 4px;
+    border-radius: 8px;
+}
+label{
+     display: flex;
+    flex-direction: column;
+    padding: 4px; 
+}
+input{
+    padding: 4px;
+    display: flex;
+    border-radius: 8px; 
+}
+input[type="submit"]{
+    display:inline;
+   margin: 8px;
+   padding: 9px 19px;
+    font-size: 15px;
+    font-style:oblique;
+   background-color:rgb(17, 150, 17);
+   border-radius: 8px;
+}
+input[type="submit"]:hover{
+    color: white;
+}
+textarea{
+    padding: 10px;
+    max-width: 100%;
+    line-height: 1;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #999;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+/* --------------manage job------------- */
+table {
+    margin-top: 20px;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+table th {
+	background-color: ghostwhite;
+	color: #111827;
+	font-weight: bold;
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+
+table td {
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #ddd;
+}
+
+table tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+table tr:hover {
+	background-color: #ddd;
+}
+
+/*------change password-----------*/
+.password{
+    border:none;
+    box-shadow: 3px black;
+    /* margin-top: 10%; */
+    margin-left: 50%;
+    width: 25%;
+    height: 41vh;
+    background-color: rgb(198, 218, 218);
+    box-shadow: 2px 5px 20px rgb(119,119, 119.5);
+
+}
+.password h3{
+    margin-top: 15px;
+    margin-left: 50px;
+}
+.password .formdetails{
+    margin-left: 20px;
+}
+
+
+/* css for the jobseeker resume view */
+
+
+.resume-container {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+input[type="file"] {
+    margin: 20px 0;
+}
+
+#viewResume {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+}
+
+#resumeViewer {
+    margin-top: 40px;
+>>>>>>> origin/main:Styles/jobseekerprofile.css
 }
