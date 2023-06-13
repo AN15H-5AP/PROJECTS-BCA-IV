@@ -1,5 +1,9 @@
 <?Php
 session_start();
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $name = $email = $phone = $password = $confirm_password = "";
 $nameErr = $emailErr = $phoneErr = $passwordErr = $confirm_passwordErr = "";
 
@@ -63,9 +67,9 @@ if (isset($_POST['submit'])) {
       $confirm_passwordErr = "Passwords do not match";
     }
   }
-  //data insert into database
+  //data insert into Database
   if (empty($nameErr) && empty($emailErr) && empty($phoneErr) && empty($passwordErr) && empty($confirm_passwordErr)) {
-    include('./database/connection.php');
+    include('./Database/connection.php');
 
     $job_seeker_password = password_hash($password, PASSWORD_DEFAULT);
 
@@ -117,26 +121,35 @@ function test_input($data)
         <h4>Fill your basic information below </h4>
       </div>
       <div class="forminput">
-        <form action="" method="POST">
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
+
           <label for="Full name"></label>
-          <input type="text" name="fname" id="fname" value="<?php if(isset($_POST['fname'])){ echo $_POST['fname'];} ?>" placeholder="Full name">
+          <input type="text" name="fname" id="fname" value="<?php if (isset($_POST['fname'])) {
+                                                              echo $_POST['fname'];
+                                                            } ?>" placeholder="Full name">
           <span style="color:red" ;>
             <?php echo "$nameErr"; ?>
           </span>
           <label for="email"></label>
-          <input type="email" name="email" id="email"value="<?php if(isset($_POST['email'])){ echo $_POST['email'];} ?>" placeholder="Email">
+          <input type="email" name="email" id="email" value="<?php if (isset($_POST['email'])) {
+                                                                echo $_POST['email'];
+                                                              } ?>" placeholder="Email">
           <span style="color:red" ;>
             <?php echo "$emailErr"; ?>
           </span>
 
           <label for="phone"></label>
-          <input type="text" name="phone" id="phone"value="<?php if(isset($_POST['phone'])){ echo $_POST['phone'];} ?>" placeholder="Mobile Number">
+          <input type="text" name="phone" id="phone" value="<?php if (isset($_POST['phone'])) {
+                                                              echo $_POST['phone'];
+                                                            } ?>" placeholder="Mobile Number">
           <span style="color:red" ;>
             <?php echo "$phoneErr"; ?>
           </span>
 
           <label for="password"></label>
-          <input type="password" name="password" id="password" value="<?php if(isset($_POST['password'])){ echo $_POST['password'];} ?>"placeholder="password">
+          <input type="password" name="password" id="password" value="<?php if (isset($_POST['password'])) {
+                                                                        echo $_POST['password'];
+                                                                      } ?>" placeholder="password">
           <span style="color:red" ;>
             <?php echo "$passwordErr"; ?>
           </span>

@@ -1,5 +1,5 @@
 <?php
-    require_once ('./database/connection.php');
+    require_once ('./Database/connection.php');
 if(isset($_GET['job_id'])){
     $del = $_GET['job_id'];
 

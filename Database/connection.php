@@ -3,7 +3,7 @@
 $servername = 'localhost';
 $username = 'root';
 $password = '';
-$database_name = 'JobPortal';
+$database_name = 'JobPortal1';
 
 $conn = new mysqli($servername,$username, $password,$database_name);
 if($conn->connect_error){

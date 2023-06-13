@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('./database/connection.php');
+include ('./Database/connection.php');
 if(!isset($_SESSION['email'])){
   header("location:company-login.php");
   exit();

@@ -4,7 +4,7 @@ session_start();
 ?>
 <?php
 
-include('./database/connection.php');
+include('./Database/connection.php');
 $error = '';
 if (isset($_POST['signin'])) {
 

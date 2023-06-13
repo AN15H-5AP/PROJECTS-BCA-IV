@@ -2,11 +2,11 @@
 <?php
 session_start();
 ?>
- 
+
 
 <!-- php to fetch data in counter area -->
 <?php
-include('./database/connection.php');
+include('./Database/connection.php');
 // <php to count the total number of company 
 $sql = "SELECT COUNT(*) as company_id FROM company ";
 $result = mysqli_query($conn, $sql);
@@ -37,9 +37,9 @@ $total_vacancies = $row['no_of_vacancy'];
 mysqli_close($conn);
 ?>
 
-<!-- sql to update the password of the admin user in the database -->
+<!-- sql to update the password of the admin user in the Database -->
 <?php
-include('./database/connection.php');
+include('./Database/connection.php');
 $newpassErr = $confirmpasserr = "";
 if (isset($_POST['submit'])) {
     $password = $_POST['password'];
@@ -102,6 +102,7 @@ mysqli_close($conn);
                         <li><a onclick="openTab(event,'company_tab')" class="tablinks">Manage Company</a></li>
                         <li><a onclick="openTab(event,'jobseeker_tab')" class="tablinks">Manage Job Seeker</a></li>
                         <li><a onclick="openTab(event,'setting_tab')" class="tablinks">Setting</a></li>
+                        <li><a onclick="openTab(event,'manage-blogs')" class="tablinks">Manage Blogs</a></li>
                         <li><a onclick="openTab(event,'logout_tab')" class="tablinks">Logout</a></li>
 
                     </ul>
@@ -130,8 +131,8 @@ mysqli_close($conn);
                                 </div>
                                 <div class="counter">
                                     <h3>Total Job Seekers</h3>
-                                    <!-- sql to update the password of the admin user in the database -->
-                                     <span class="count" id="">
+                                    <!-- sql to update the password of the admin user in the Database -->
+                                    <span class="count" id="">
                                         <!-- php to count the total number of job seeker  -->
                                         <?php
                                         echo "$total_job_seeker";
@@ -175,9 +176,9 @@ mysqli_close($conn);
                                     <th> Phone</th>
                                     <!-- <th>Action</th> -->
                                 </tr>
-                                <!-- php to retrive company data from the database in the tabe  -->
+                                <!-- php to retrive company data from the Database in the tabe  -->
                                 <?php
-                                include('./database/connection.php');
+                                include('./Database/connection.php');
 
                                 $sql = "SELECT * FROM company";
                                 $result = mysqli_query($conn, $sql);
@@ -216,7 +217,7 @@ mysqli_close($conn);
                                 </tr>
                                 <!-- php to fetch the jobseeker content from the databse in the table -->
                                 <?php
-                                include('./database/connection.php');
+                                include('./Database/connection.php');
 
                                 $sql = "SELECT * FROM job_seeker";
                                 $result = mysqli_query($conn, $sql);
@@ -238,6 +239,55 @@ mysqli_close($conn);
                             </table>
                         </div>
 
+                        <!-- manage blogs post -->
+                        <div class="tabcontent" id="company_tab">
+                            <h3 class="content_heading">
+                                Manage Company
+                            </h3>
+                            <!-- Manage Company content goes here -->
+
+                            <table class="table">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Company Name</th>
+                                    <th>Address</th>
+                                    <th> Email</th>
+                                    <th> Phone</th>
+                                    <!-- <th>Action</th> -->
+                                </tr>
+                                <!-- php to retrive company data from the Database in the tabe  -->
+                                <?php
+                                include('./Database/connection.php');
+
+                                $sql = "SELECT * FROM company";
+                                $result = mysqli_query($conn, $sql);
+
+                                if (mysqli_num_rows($result) > 0) {
+                                    while ($row = mysqli_fetch_assoc($result)) {
+                                        echo "<tr>";
+                                        echo "<td>" . $row['company_id'] . "</td>";
+                                        echo "<td>" . $row['company_name'] . "</td>";
+                                        echo "<td>" . $row['location'] . "</td>";
+                                        echo "<td>" . $row['email'] . "</td>";
+                                        echo "<td>" . $row['phone'] . "</td>";
+                                        // echo "<td>" . $row['Action'] . "</td>";
+                                        echo "</tr>";
+                                    }
+                                }
+                                mysqli_close($conn);
+                                ?>
+                            </table>
+                        </div>
+
+                        <!-- manage job seeker tab start here  -->
+                        <div class="tabcontent" id="manage-blogs">
+                            <!-- Manage Job Seeker content goes here -->
+                            <?php
+                            include('bloguploads.php')
+                            ?>
+
+                        </div>
+
                         <!-- seting tab for the admin dashboard -->
                         <div class="tabcontent" id="setting_tab">
                             <!-- Setting content goes here -->
@@ -254,8 +304,7 @@ mysqli_close($conn);
                                     <form method="POST" class="form">
                                         <div class="setting_form_input">
                                             <label for="password1">New Password</label>
-                                            <input type="password" name="password" id="password"
-                                                placeholder="new password">
+                                            <input type="password" name="password" id="password" placeholder="new password">
                                             <span class="error">
                                                 <!-- dispaly the error message  -->
                                                 <?php echo $newpassErr; ?>
@@ -263,8 +312,7 @@ mysqli_close($conn);
                                             </span>
 
                                             <label for="password2">Confirm Password</label>
-                                            <input type="password" name="confirmpassword" id="confirmpassword"
-                                                placeholder=" Re-Enter New password">
+                                            <input type="password" name="confirmpassword" id="confirmpassword" placeholder=" Re-Enter New password">
                                             <span class="error">
                                                 <!-- display the error message -->
                                                 <?php echo $confirmpasserr; ?>

@@ -1,0 +1,236 @@
+ /* CSS styling for the job blogs page */
+ body {
+  font-family: Arial, sans-serif;
+  /* background-color: #f5f5f5;
+  margin: 0;
+  padding: 20px; */
+}
+
+.navbarflow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fbeeee;
+  height: 8vh;
+}
+.logo img {
+  height: 100px;
+  width: 100px;
+}
+.links a {
+  font-size: 20px;
+  text-decoration: none;
+  margin: 12px;
+}
+.navbutton {
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+  margin-right: 10px;
+}
+.navbutton button {
+  border: none;
+  align-items: center;
+  background-color: #d9d9d9;
+  padding: 7px 14px;
+  border-radius: 8px;
+}
+.afterlogin img {
+  border: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+.afterlogin .dropdown {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 60px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.afterlogin .dropdown button {
+  display: block;
+  background-color: transparent;
+  padding: 6px 5px;
+  color: none;
+  cursor: pointer;
+}
+.afterlogin .dropdown a {
+  text-decoration: none;
+  font-size: 10px;
+}
+
+.afterlogin:hover .dropdown {
+  display: block;
+}
+
+
+/* css for main container */
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.blog-card {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.blog-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+.blog-card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.blog-card .blog-info {
+  font-size: 14px;
+  color: #666666;
+  margin-top: 10px;
+}
+
+.blog-card h2 {
+  margin-top: 10px;
+  font-size: 18px;
+  color: #333333;
+}
+
+.blog-card p {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #666666;
+}
+
+.blog-description {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #333333;
+}
+
+.read-more-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.read-more-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* uploads form css */
+
+
+.upload-form {
+  max-width: 500px;
+  margin: 20px auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-form h2 {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  cursor: text;
+}
+
+.form-group textarea {
+  height: 100px;
+}
+
+.form-group input[type="file"] {
+  display: block;
+  margin-top: 5px;
+}
+
+.form-group input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: #0056b3;
+  cursor: pointer;
+}
+
+/* css for blogs details page */
+
+.blog-details {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+.blog-details .blog-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 20px;
+  border-radius: 10px;
+}
+
+.blog-details h2 {
+  text-align: center;
+  color: #333333;
+  margin-bottom: 10px;
+}
+
+.blog-details .posted-info {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.blog-details .description {
+  font-size: 16px;
+  color: #333333;
+}

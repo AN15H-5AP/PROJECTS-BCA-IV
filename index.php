@@ -1,6 +1,6 @@
 <?php
 session_start();
-include('./database/connection.php');
+include('./Database/connection.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +23,7 @@ include('./database/connection.php');
 
         <div class="links">
             <a href="index.php">Home</a>
-            <a href="">Blog</a>
+            <a href="job_blogs.php">Blog</a>
             <a href="">Contact</a>
             <a href="">About us</a>
         </div>
@@ -32,8 +32,7 @@ include('./database/connection.php');
             <?php if (!isset($_SESSION['email'])) { ?>
                 <div class="signin">
                     <a href="job_seekerlogin.php">
-                        <button type="submit"><img src="./images/sign in.png" height="13px" width="13px"
-                                style="align-items: center;"> Sign in</button>
+                        <button type="submit"><img src="./images/sign in.png" height="13px" width="13px" style="align-items: center;"> Sign in</button>
                     </a>
                 </div>
                 <div class="signup">
@@ -99,46 +98,46 @@ include('./database/connection.php');
          where deadline_date >= CURDATE() ORDER BY RAND()";
         $result = mysqli_query($conn, $sql);
         while ($row = mysqli_fetch_assoc($result)) {
-            ?>
+        ?>
             <div class="trendingjob">
                 <div class="cards">
-                    <?php echo'<a href="jobdescription.php?job_id='.$row['job_id'] . '">'?>
-                        <!--contents -->
-                        <div class="cardscontent">
-                            <div class="imagearea">
-                                <div class="companyimg">
-                                   <?php echo '<img src="./images/uploaded_image/'.$row['Image_name'].'"alt="">'?>
-                                </div>
-                                <div class="companyname">
-                                    <li>
-                                        <?php echo $row['job_title']; ?>
-                                    </li>
-                                    <li>
-                                        <?php echo $row['company_name']; ?>
-                                    </li>
-                                </div>
+                    <?php echo '<a href="jobdescription.php?job_id=' . $row['job_id'] . '">' ?>
+                    <!--contents -->
+                    <div class="cardscontent">
+                        <div class="imagearea">
+                            <div class="companyimg">
+                                <?php echo '<img src="./images/uploaded_image/' . $row['Image_name'] . '"alt="">' ?>
                             </div>
-                            <div class="info">
+                            <div class="companyname">
                                 <li>
-                                    <?php echo "location:" . $row['job_address']; ?>
+                                    <?php echo $row['job_title']; ?>
                                 </li>
                                 <li>
-                                    <?php echo "Job-type:" . $row['job_type']; ?>
-                                </li>
-                                <li>
-                                    <?php
-                                    $deaddate = $row['deadline_date'];
-                                    $deadstamp = strtotime($deaddate);
-                                    $dead = date('Y-m-d', $deadstamp);
-                                    echo "Deadlinedate:".$dead;
-                                    ?>
+                                    <?php echo $row['company_name']; ?>
                                 </li>
                             </div>
-                           <?php echo '<a href="jobdescription.php?jobid='.$row['job_id'].'">
+                        </div>
+                        <div class="info">
+                            <li>
+                                <?php echo "location:" . $row['job_address']; ?>
+                            </li>
+                            <li>
+                                <?php echo "Job-type:" . $row['job_type']; ?>
+                            </li>
+                            <li>
+                                <?php
+                                $deaddate = $row['deadline_date'];
+                                $deadstamp = strtotime($deaddate);
+                                $dead = date('Y-m-d', $deadstamp);
+                                echo "Deadlinedate:" . $dead;
+                                ?>
+                            </li>
+                        </div>
+                        <?php echo '<a href="jobdescription.php?jobid=' . $row['job_id'] . '">
                                 <button>Apply</button>
                             </a>' ?>
-                        </div>
-                   <?php echo '</a>' ?>
+                    </div>
+                    <?php echo '</a>' ?>
                 </div>
 
             </div>
@@ -225,16 +224,12 @@ include('./database/connection.php');
                 <div class="sociallinks">
                     <h2>Socail Links</h2>
                     <div class="upper">
-                        <a href="https://facebook.com"><img src="./images/facebook.svg" width="30px" height="30px"
-                                alt=""></a>
-                        <a href="https://linkedin.com"><img src="./images/linkedin.svg" width="30px" height="30px"
-                                alt=""></a>
+                        <a href="https://facebook.com"><img src="./images/facebook.svg" width="30px" height="30px" alt=""></a>
+                        <a href="https://linkedin.com"><img src="./images/linkedin.svg" width="30px" height="30px" alt=""></a>
                     </div>
                     <div class="lower">
-                        <a href="https://instagram.com"><img src="./images/instagram.svg" width="30px" height="30px"
-                                alt=""></a>
-                        <a href="https://twitter.com"><img src="./images/twitter.svg" width="30px" height="30px"
-                                alt=""></a>
+                        <a href="https://instagram.com"><img src="./images/instagram.svg" width="30px" height="30px" alt=""></a>
+                        <a href="https://twitter.com"><img src="./images/twitter.svg" width="30px" height="30px" alt=""></a>
                     </div>
                 </div>
                 <div class="contactus">

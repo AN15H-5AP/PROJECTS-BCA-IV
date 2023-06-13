@@ -1,7 +1,7 @@
 <?php
 session_start();
 $companyemail = $_SESSION['email'];
-include("./database/connection.php");
+include("./Database/connection.php");
 if (!isset($companyemail)) {
   header("location:index.php");
 }

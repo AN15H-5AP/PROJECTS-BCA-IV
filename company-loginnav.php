@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="./Styles/company-signinnav.css">
+    <link rel="stylesheet" href="./styles/company-signinnav.css">
 </head>
 <body>
 <div class="navbar_flow">
@@ -16,7 +16,7 @@
     </div>
     <div class="header">
       <a href="index.php" id="home">Home</a>
-      <a href="#" id="Blog">Blog</a>
+      <a href="job_blogs.php" id="Blog">Blog</a>
       <a href="#" id="contact">Contact</a>
       <a href="#" id="company">About us</a>
     </div>
